@@ -1,0 +1,19 @@
+# Name of the workflow
+name: First Workflow
+
+# Trigger
+on: 
+  push # event
+
+jobs:
+  echo-statement: # job name
+    runs-on: ubuntu-latest # github hosted runner
+    steps:
+     - name: Echo
+       run: echo " Welcome to first workflow"
+  display-info: # second job
+    runs-on: windows-latest
+    steps:
+     - name: Echo
+       run: echo " Welcome to second workflow"
+    
