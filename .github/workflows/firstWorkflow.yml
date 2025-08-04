@@ -1,11 +1,15 @@
 # Name of the workflow
 name: First Workflow
 
+run-name: DEBUG| ${{inputs.debug}}
+
 # Trigger
 on: 
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        default: false
 
 jobs:
   build: # job name
@@ -13,6 +17,8 @@ jobs:
     steps:
      - name: Echo
        run: echo "Welcome to first workflow - Ubuntu"
+     - name: Exit
+       run: exit 1
   deploy: # second job
     needs: build
     runs-on: windows-latest
