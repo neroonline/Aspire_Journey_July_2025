@@ -1,12 +1,19 @@
-name: Github Context
+name: Github Env Context
+
+env:
+  MY_VAR: 'workflow'
 
 on:
   workflow_dispatch
 jobs:
   Context:
+    env:
+      MY_VAR: 'jobs'
     runs-on: ubuntu-latest
     steps:
       - name: Print
+        env:
+          MY_VAR: 'steps'
         run: | # instead of using run echo / run echo / run echo
           echo 'Actor ${{github.actor}}'
           echo 'Event ${{github.event_name}}'
@@ -14,4 +21,4 @@ jobs:
           echo 'sha value ${{github.sha}}'
           echo 'Run details ${{github.run_id}}'
           echo 'Runner number details ${{github.run_number}}'
-  
+          echo 'Env value is ${{env.MY_VAR}}'
