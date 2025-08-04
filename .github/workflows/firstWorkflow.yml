@@ -3,7 +3,7 @@ name: First Workflow
 
 # Trigger
 on: 
-  push # event
+  [push, pull_request] # event
 
 jobs:
   build: # job name
