@@ -12,4 +12,4 @@ jobs:
     environment: ${{inputs.TARGET_ENVIRONMENT}}
     steps:
       - name: echo vars
-        run: echo "Vars value is ${{vars.VARS}}
+        run: echo "Vars value is ${{vars.VARS}}"
