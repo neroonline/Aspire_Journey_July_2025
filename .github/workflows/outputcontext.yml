@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: greeting
-        run: echo 'message = Hello, welcome!' >> GITGUB_OUTPUT # storing value
+        run: echo 'message = Hello, welcome!' >> $GITHUB_OUTPUT # storing value
       - run: echo "Output value is ${{steps.greeting.outputs.message}}" # retrieving value
       
