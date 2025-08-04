@@ -23,3 +23,4 @@ jobs:
           echo 'Runner number details ${{github.run_number}}'
           echo 'Env value is ${{env.MY_VAR}}'
           echo 'Global env value is ${{vars.MY_VAR}}'
+          echo 'Secret 'username' is ${{secrets.USERNAME}}'
