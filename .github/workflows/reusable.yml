@@ -9,9 +9,9 @@ on:
     secrets:
       MY_SECRET:
         required: true
-  jobs:
-    echo-hello:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Running in ${{inputs.environment}}
-        - run: echo "Secret is ${{secrets.MY_SECRET}}
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running in ${{inputs.environment}}
+      - run: echo "Secret is ${{secrets.MY_SECRET}}
