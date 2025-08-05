@@ -4,8 +4,8 @@ on:
   workflow_call:
     inputs:
       environment:
-      required: true
-      type: string
+        required: true
+        type: string
     secrets:
       MY_SECRET:
         required: true
